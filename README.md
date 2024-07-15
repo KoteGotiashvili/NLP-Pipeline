@@ -71,12 +71,18 @@ end to deployment, monitoring, all of those steps are called NLP pipeline:
 **Monitoring and Model Updating:** Once the model is deployed, it is important to monitor its performance over time. If the model's performance starts to degrade, it may need to be updated with new data or retrained.
 
 ## Spacy vs NLTK
+**Spacy:** Object-oriented approach. Spacy provides most efficient algorithms for particular tasks, 
+don't gives you a lot of choice but the best one.
 
-**SOON 🔜** Comparison between Spacy and NLTK libraries for NLP tasks.
+**NLTK:** String processing library. NLTK give you broader choice of algorithms,
+it is more customizable, good for researchers.
+
+**Overally both library have their use, and both is the good, but I'm going to use Spacy.**
+
 
 ## Tokenization in Spacy
 
-**SOON 🔜** Explanation of tokenization process using Spacy.
+**SOON 🔜** Explanation of tokenization process using Spacy. 
 
 ## Language Processing Pipeline in Spacy
 
