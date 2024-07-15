@@ -24,8 +24,27 @@ Welcome to the NLP Basics repository, where we explore various fundamental conce
    - Word Vectors in Gensim
 
 ## NLP Use Cases
+![alt text](images/nlpusecases.png)
 
-**SOON 🔜**  Introduction to various applications and use cases of NLP in real-world scenarios.
+I will discuss few of them and add other use cases too:
+
+**Text Classification:**  Sorting text into predefined categories
+like spam detection in emails or sentiment analysis in customer 
+reviews.
+
+**Information Extraction/Gathering:** Identifying and extracting 
+specific pieces of information from text,
+such as names, dates, or events from news articles.
+
+**Chat Bots:** AI-powered programs that simulate human 
+conversation, used for customer 
+support, information retrieval, or entertainment.
+
+**Text Summarization:** Condensing large amounts of text into 
+shorter, coherent summaries, 
+often used for news articles or research papers.
+
+**Machine Translation:** Automatically translating text from one language to another.
 
 ## NLP Pipelines
 
