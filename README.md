@@ -47,9 +47,28 @@ often used for news articles or research papers.
 **Machine Translation:** Automatically translating text from one language to another.
 
 As you can see NLP is quite cool and useful skill to learn (:
+
 ## NLP Pipelines
 
-**SOON 🔜** Overview of the typical stages involved in an NLP pipeline.
+Building NLP means perform various steps starting from data collection, cleaning 
+end to deployment, monitoring, all of those steps are called NLP pipeline:
+![alt text](images/nlppipeline.png)
+
+**Data Acquisition:** This is the first step in the pipeline, and it involves collecting text data from a variety of sources, such as the web, social media, or customer reviews.
+
+**Text Cleaning:** Once the data has been collected, it needs to be cleaned. This step involves removing irrelevant information, such as HTML tags, punctuation, and stop words. Stop words are words that are common in a language but do not provide much meaning, such as "the", "a", and "is".
+
+**Pre-processing:** After the text has been cleaned, it is pre-processed. This step involves breaking the text down into smaller units, such as words or phrases (tokenization), and converting the words to their base form (lemmatization or stemming).
+
+**Feature Engineering:**In this step, features are extracted from the text data. Features are numerical representations of the text that can be used by machine learning models. There are many different feature engineering techniques, such as bag-of-words and TF-IDF.
+
+**Modeling:** Once the features have been extracted, they are used to train a machine learning model. The model can then be used to perform a variety of NLP tasks, such as sentiment analysis, text classification, or machine translation.
+
+**Evaluation:** After the model has been trained, it is evaluated to assess its performance. This step involves testing the model on a set of unseen data and measuring how well it performs.
+
+**Deployment:** If the model performs well on the evaluation task, it can be deployed into production. This means that the model can be used to make predictions on new data.
+
+**Monitoring and Model Updating:** Once the model is deployed, it is important to monitor its performance over time. If the model's performance starts to degrade, it may need to be updated with new data or retrained.
 
 ## Spacy vs NLTK
 
