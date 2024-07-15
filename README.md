@@ -46,6 +46,7 @@ often used for news articles or research papers.
 
 **Machine Translation:** Automatically translating text from one language to another.
 
+As you can see NLP is quite cool and useful skill to learn (:
 ## NLP Pipelines
 
 **SOON 🔜** Overview of the typical stages involved in an NLP pipeline.
