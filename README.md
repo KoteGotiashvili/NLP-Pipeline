@@ -1,6 +1,6 @@
-# NLP Basics
+# NLP Fundamentals
 
-Welcome to the NLP Basics repository, where we explore various fundamental concepts and techniques in Natural Language Processing (NLP). Below are the main topics covered:
+Welcome to the NLP Fundamentals repository, where we explore various fundamental concepts and techniques in Natural Language Processing (NLP). Below are the main topics covered:
 
 ## Table of Contents
 
