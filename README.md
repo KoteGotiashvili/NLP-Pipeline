@@ -60,7 +60,7 @@ end to deployment, monitoring, all of those steps are called NLP pipeline:
 
 **Pre-processing:** After the text has been cleaned, it is pre-processed. This step involves breaking the text down into smaller units, such as words or phrases (tokenization), and converting the words to their base form (lemmatization or stemming).
 
-**Feature Engineering:**In this step, features are extracted from the text data. Features are numerical representations of the text that can be used by machine learning models. There are many different feature engineering techniques, such as bag-of-words and TF-IDF.
+**Feature Engineering:** In this step, features are extracted from the text data. Features are numerical representations of the text that can be used by machine learning models. There are many different feature engineering techniques, such as bag-of-words and TF-IDF.
 
 **Modeling:** Once the features have been extracted, they are used to train a machine learning model. The model can then be used to perform a variety of NLP tasks, such as sentiment analysis, text classification, or machine translation.
 
