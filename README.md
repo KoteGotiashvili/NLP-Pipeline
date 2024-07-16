@@ -7,6 +7,7 @@ Welcome to the NLP Fundamentals repository, where we explore various fundamental
 1. [NLP Use Cases](#nlp-use-cases)
 2. [NLP Pipelines](#nlp-pipelines)
 3. [Spacy vs NLTK](#spacy-vs-nltk)
+4. [Text Cleaning](#text-cleaning)
 4. [Tokenization in Spacy](#tokenization-in-spacy)
 5. [Language Processing Pipeline in Spacy](#language-processing-pipeline-in-spacy)
 6. [Stemming and Lemmatization](#stemming-and-lemmatization)
@@ -78,6 +79,26 @@ don't gives you a lot of choice but the best one.
 it is more customizable, good for researchers.
 
 **Overally both library have their use, and both is the good, but I'm going to use Spacy.**
+*
+
+## Text Cleaning
+There are few important steps for text cleaning:
+
+**Lowercasing**
+
+**Remove HTML tags**
+
+**Remove URLS**
+
+**Remove Punctuations**
+
+**Spelling Correction**
+
+**Handling Emojis**
+
+And so on, It's basically depends on data.
+
+
 
 
 ## Tokenization in Spacy
