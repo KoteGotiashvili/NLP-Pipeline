@@ -6,6 +6,7 @@ quote_from_sutskever = ("The thing you really want is for the human teachers tha
                         "human-machine collaboration, which teaches the next machine. ")
 
 nlp = spacy.blank('en')
+nlp.add_pipe('sentencizer')
 doc = nlp(quote_from_sutskever)
 
 
@@ -21,6 +22,24 @@ def word_tokenization(doc):
     """
     return [token.text for token in doc]
 
+
+def sentence_tokenization(doc):
+    """"
+        Tokenize the input text into individual sentences.
+
+        Args:
+            doc (str): The input doc.
+
+        Returns:
+            list: A list of sentences in the input text.
+    """
+    return [sent.text for sent in doc.sents]
+
+
+# word tokenizer
 #print(word_tokenization(quote_from_sutskever))
+
+# sentence tokenizer
+#print(sentence_tokenization(doc))
 
 
