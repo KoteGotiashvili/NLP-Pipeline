@@ -126,7 +126,7 @@ And there are a lot of different ones like that which helps to understand token 
 
 ## Language Processing Pipeline in Spacy
 
-There is code:  [Tokenization](LanguageProcessingPipeline.py)
+There is code:  [Language Processing Pipeline](LanguageProcessingPipeline.py)
 
 **explanation**
 
