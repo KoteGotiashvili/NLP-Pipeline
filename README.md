@@ -126,7 +126,17 @@ And there are a lot of different ones like that which helps to understand token 
 
 ## Language Processing Pipeline in Spacy
 
-**SOON 🔜** Understanding the sequential stages in Spacy's NLP processing pipeline.
+There is code:  [Tokenization](LanguageProcessingPipeline.py)
+
+**explanation**
+
+This code demonstrates basic NLP processing with SpaCy. 
+It first tokenizes the input text, which breaks it down into individual
+words and punctuation. For each token, the script prints the token text, its
+part-of-speech tag, and its lemma (base form). It then identifies named entities 
+(like people or organizations) in the text, printing each entity's text, label,
+and a description of the label. This process shows how to extract and analyze 
+text.
 
 ## Stemming and Lemmatization
 
