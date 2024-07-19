@@ -103,7 +103,13 @@ And so on, It's basically depends on data.
 
 ## Tokenization in Spacy
 
-**SOON 🔜** Explanation of tokenization process using Spacy. 
+**Tokenization** is process of splitting text into meaningful segments, parts.
+
+**Sentence Tokenization:** Split sentences 
+
+**Word Tokenization:** Split words
+
+
 
 ## Language Processing Pipeline in Spacy
 
