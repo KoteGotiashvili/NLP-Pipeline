@@ -109,6 +109,19 @@ And so on, It's basically depends on data.
 
 **Word Tokenization:** Split words
 
+Both Sentence and Word Tokenizer code implementation in Spacy: [Tokenization](Tokenization.py)
+
+
+### Token Attributes 
+ Token have a lot of different attributes, For instance
+
+**LIKE_NUM:** which checks whether token in numerical value.
+
+**LIKE_EMAIL:** Token text look like an email address. 
+
+**LIKE_URL:** 	Token text looks like a URL. 
+
+And there are a lot of different ones like that which helps to understand token context.
 
 
 ## Language Processing Pipeline in Spacy
