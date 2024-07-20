@@ -155,6 +155,8 @@ Let's compare Stemming and Lemmatization results:
 
 As you can see as a machine when you have linguistic knowledge you make better job ()
 
+There is implementation of code + custom lemmatization of words:
+[Stemming And Lemmatization](StemmingLemmatization.py)
 
 
 ## Part Of Speech (POS) Tagging
