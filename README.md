@@ -145,6 +145,18 @@ text.
 
 **spaCy does not support stemming, for that reason I'm going to use NLTK**
 
+Let's compare Stemming and Lemmatization results:
+
+### Stemming results:
+![alt text](images/stem.png)
+
+### Lemmatization results:
+![alt text](images/lemma.png)
+
+As you can see as a machine when you have linguistic knowledge you make better job ()
+
+
+
 ## Part Of Speech (POS) Tagging
 
 **SOON 🔜** Introduction to POS tagging and its importance in NLP tasks.
