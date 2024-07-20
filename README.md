@@ -139,8 +139,11 @@ and a description of the label. This process shows how to extract and analyze
 text.
 
 ## Stemming and Lemmatization
+**Stemming:** Use fixed rules, for example talking -> talk, For that you can simply use regex and get base words.
 
-**SOON 🔜** Explanation of stemming and lemmatization techniques in NLP.
+**Lemmatization:** Whenever you need to use knowledge of language, or linguistic knowledge, you need lemmatization, base word is called lemma.
+
+**spaCy does not support stemming, for that reason I'm going to use NLTK**
 
 ## Part Of Speech (POS) Tagging
 
