@@ -161,7 +161,44 @@ There is implementation of code + custom lemmatization of words:
 
 ## Part Of Speech (POS) Tagging
 
-**SOON 🔜** Introduction to POS tagging and its importance in NLP tasks.
+**POS:** Sentence is made up with different parts, and those parts are called part of speech.
+There are different POS tags:
+
+**Noun:** Represents a person, place, thing, or idea.
+Example: "cat," "city," "happiness."
+
+**Verb:** Expresses an action, occurrence, or state of being.
+Example: "run," "is," "seem."
+
+**Adjective:** Describes or modifies a noun or pronoun.
+Example: "happy," "blue," "quick."
+
+**Adverb:** Modifies a verb, adjective, or other adverb, often indicating how, when, or where something happens.
+Example: "quickly," "very," "there."
+
+**Pronoun:** Replaces a noun to avoid repetition.
+Example: "he," "she," "it."
+
+**Preposition:** Shows the relationship between a noun or pronoun and other words in a sentence.
+Example: "in," "on," "under."
+
+**Conjunction:** Connects words, phrases, or clauses.
+Example: "and," "but," "because."
+
+**Interjection:** Expresses strong emotion or reaction.
+Example: "wow," "ouch," "hey."
+
+**Determiner:** Introduces a noun and specifies its reference.
+Example: "the," "a," "my."
+
+**Auxiliary Verb:** Helps form different tenses, moods, or voices of verbs.
+Example: "have," "will," "can."
+
+**In practice it have great use. For instance, it can be used to identify POS in sentences, find out distribution of them. 
+Moreover, there are type of POS which is not needy for NLP tasks and we can remove them such as interjections(like "wow" or "ouch") 
+Auxiliary Verbs(like "is," "will"), Determiners(like "the," "a"), 
+Removing or ignoring these types of POS can streamline processing and focus on the most relevant features for specific tasks.**
+
 
 ## Named Entity Recognition (NER)
 
