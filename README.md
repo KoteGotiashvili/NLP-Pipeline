@@ -208,13 +208,23 @@ information retrieval and organization. This technology is pivotal in refining s
 categorization, and powering recommendation systems. Additionally, NER aids in sentiment analysis, fraud detection, and 
 customer service automation by identifying and classifying relevant entities within large volumes of unstructured data.
 
+
+
 ## Text Representation
 
-**SOON 🔜** Various techniques for representing text data in NLP tasks.
+**I'm done preprocessing so far, next part is Feature Engineering(text representation)**
+
 
 ### Label One-Hot Encoding
 
-**SOON 🔜** Explanation and implementation of label one-hot encoding for classification tasks.
+**Label Encoding:** Representing text using numbers, For instance, "I Love AI" can be represented as [1,2,3], where 1 is I, 2 is Love, 3 is AI.
+This is primitive way to represent text.
+
+**One-Hot Encoding:** One-hot encoding turns categories into binary numbers. Each category is represented as a vector with a single '1' in 
+the position that matches the category, and '0's in all other positions. This is primitive way too.
+
+**Those two method have a lot of disadvantages such as they consume a lot of memory, they don't understand meaning of words, etc**
+
 
 ### Bag of Words
 
