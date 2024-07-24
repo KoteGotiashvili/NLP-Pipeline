@@ -1,5 +1,5 @@
 import spacy
-
+from spacy.tokens import Span
 nlp = spacy.load('en_core_web_sm')
 
 def get_ents(text):
@@ -9,4 +9,7 @@ def get_ents(text):
 
 # get ents from text
 #get_ents("Ilya Sutskever, co-founder of OpenAI, has published over 50 research papers and holds multiple AI patents.")
+
+
+
 
