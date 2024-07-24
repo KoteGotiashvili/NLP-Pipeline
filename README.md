@@ -202,7 +202,11 @@ Removing or ignoring these types of POS can streamline processing and focus on t
 
 ## Named Entity Recognition (NER)
 
-**SOON 🔜** Overview of Named Entity Recognition (NER) and its applications.
+**Named Entity Recognition (NER)**  has numerous applications, including enhancing search capabilities and enabling 
+data-driven insights. By extracting entities such as locations, organizations, and individuals from text, NER improves
+information retrieval and organization. This technology is pivotal in refining search engine results, automating content 
+categorization, and powering recommendation systems. Additionally, NER aids in sentiment analysis, fraud detection, and 
+customer service automation by identifying and classifying relevant entities within large volumes of unstructured data.
 
 ## Text Representation
 
