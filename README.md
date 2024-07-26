@@ -228,7 +228,14 @@ the position that matches the category, and '0's in all other positions. This is
 
 ### Bag of Words
 
-**SOON 🔜** Introduction to the Bag of Words model for text representation.
+**Bag of words** is a method that counts how often each word appears in a text. These counts are used to create a list of 
+numbers (vectors) representing the text. It ignores grammar and word order.
+
+This approach have following problems:
+
+1 -> It requires a lot of memory still, but compared one-hot encoding less.
+
+2 -> It does not understand meaning of words
 
 ### Stop Words
 
