@@ -237,6 +237,10 @@ This approach have following problems:
 
 2 -> It does not understand meaning of words
 
+Dataset Link: https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews?resource=download
+
+Dataset and code which implements review classifier model: [Review Classifier](BOW.py)
+
 ### Stop Words
 
 **SOON 🔜** Understanding stop words and their role in NLP preprocessing.
