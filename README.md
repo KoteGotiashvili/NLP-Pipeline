@@ -248,6 +248,8 @@ However, the necessity of removing stop words depends on the specific task and o
 
 For example, if we are using the Bag of Words technique to classify sentences, we do not need extra space for stop words.
 
+Removing stop words and find their percentage in sentence:  [Stop Words Removal And Their Precentage](StopWords.py)
+
 ### Text Representation using Bag of N-grams
 
 **SOON 🔜** Using Bag of N-grams for capturing n-gram information in text.
