@@ -243,7 +243,10 @@ Dataset and code which implements review classifier model: [Review Classifier](B
 
 ### Stop Words
 
-**SOON 🔜** Understanding stop words and their role in NLP preprocessing.
+**Stop Words** are common words such as "the", "a", "in", and "on". These words often create noise in NLP projects, so it is generally sensible to remove them. 
+However, the necessity of removing stop words depends on the specific task and objectives.
+
+For example, if we are using the Bag of Words technique to classify sentences, we do not need extra space for stop words.
 
 ### Text Representation using Bag of N-grams
 
