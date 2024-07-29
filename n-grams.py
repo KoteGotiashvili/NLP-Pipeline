@@ -1,6 +1,10 @@
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.metrics import classification_report
+from sklearn.pipeline import Pipeline
 import spacy
 v = CountVectorizer(ngram_range=(1,2))
 # v.fit(["doesn’t bet against deep learning. Somehow, every time you run into an obstacle, within six months or a year researchers find a way around it"])
@@ -44,11 +48,11 @@ df = pd.read_json('data/news_dataset.json', lines=True)
 df = df.drop(columns=['authors', 'date', 'link','headline'])
 
 #check if there is inbalance
-print(df.category.value_counts()) # well there is inbalance lets set 1000 as base
+#print(df.category.value_counts()) # well there is inbalance lets set 1000 as base
 
 unique_categories = df['category'].unique()
-print(unique_categories)
-print(len(unique_categories))
+#print(unique_categories)
+#print(len(unique_categories))
 
 
 target_samples = 1000
@@ -66,12 +70,35 @@ for category in unique_categories:
 
 # Concatenate all sampled DataFrames, data is balanced now
 balanced_df = pd.concat(sampled_dfs, ignore_index=True)
-print(balanced_df.category.value_counts())
+#print(balanced_df.category.value_counts())
 # there is 42 unique categories
 
-# lets split for train and testing
+# turn categories into labels
 
-X_train, X_test, y_train, y_test = train_test_split(df.balanced.text, df.balanced.category, test_size=0.2, random_state=42)
+# Initialize LabelEncoder
+label_encoder = LabelEncoder()
+# Fit and transform the 'category' column
+balanced_df['category_encoded'] = label_encoder.fit_transform(balanced_df['category'])
+# Drop the original 'category' column if needed
+
+#print(balanced_df.columns)
+
+# lets split for train and testing
+balanced_df['preprocessed_txt'] = balanced_df['short_description'].apply(preprocess)
+X_train, X_test, y_train, y_test = train_test_split(balanced_df.preprocessed_txt,
+                                                    balanced_df.category_encoded,
+                                                    test_size=0.2,
+                                                    random_state=42,
+                                                    stratify=balanced_df.category_encoded)
+clf = Pipeline([
+    ('vectorizer_bow', CountVectorizer(ngram_range=(1,3))),
+    ('classifier', MultinomialNB())
+])
+
+clf.fit(X_train, y_train)
+y_pred = clf.predict(X_test)
+rep = classification_report(y_test, y_pred)
+print(rep)
 
 
 
