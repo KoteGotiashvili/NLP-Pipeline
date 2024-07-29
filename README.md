@@ -256,6 +256,13 @@ The Bag of N-Grams is a text representation method where words or characters are
 into sequences of N items. It captures patterns in the text by
 counting how often each N-gram appears, helping in text analysis and natural language processing tasks.
 
+**The N-Grams model is a technique used to analyze and represent text data. 
+It involves breaking text into sequences of N contiguous words (N-grams). By counting 
+the frequency of these N-grams across the dataset and associating them with specific labels 
+or categories, the model learns patterns in the data. This approach helps in predicting labels
+or categories for new, unseen text based on the frequency and patterns of N-grams learned from 
+the training data.**
+
 ### Using TF-IDF (Term Frequency-Inverse Document Frequency)
 
 **SOON 🔜** Explanation and implementation of TF-IDF for text representation.
