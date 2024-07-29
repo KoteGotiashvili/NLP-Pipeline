@@ -1,7 +1,7 @@
 from sklearn.feature_extraction.text import CountVectorizer
 import spacy
-v = CountVectorizer(ngram_range=(2,2))
-v.fit(["doesn’t bet against deep learning. Somehow, every time you run into an obstacle, within six months or a year researchers find a way around it"])
+v = CountVectorizer(ngram_range=(1,2))
+# v.fit(["doesn’t bet against deep learning. Somehow, every time you run into an obstacle, within six months or a year researchers find a way around it"])
 
 # get splited text with count, just fin how it works
 #print(v.vocabulary_)
@@ -26,6 +26,13 @@ def preprocess(text):
     return " ".join(clean_text)
 
 words_processed = [ preprocess(text) for text in words]
-print(words_processed)
+# print(words_processed)
+v.fit(words_processed)
 
+
+# test how it turns text int ovectors
+# takes all unique words from dataset and adds to column, and based on that predicts unseen data, For large datasets basically it will eat memory (:
+# transformed = v.transform(["OpenAI is not open but paid (:"])
+# print(transformed.toarray())
+# print(transformed.shape)
 
