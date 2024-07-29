@@ -1,3 +1,4 @@
+import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 import spacy
 v = CountVectorizer(ngram_range=(1,2))
@@ -35,4 +36,12 @@ v.fit(words_processed)
 # transformed = v.transform(["OpenAI is not open but paid (:"])
 # print(transformed.toarray())
 # print(transformed.shape)
+
+
+## Let's do some use case of n-grams on real dataset
+df = pd.read_json('data/news_dataset.json', lines=True)
+df = df.drop(columns=['authors', 'date', 'link','headline'])
+
+#check if there is inbalance
+print(df.category.value_counts()) # well there is inbalance lets set 1000 as base
 
