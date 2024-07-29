@@ -1,5 +1,6 @@
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.model_selection import train_test_split
 import spacy
 v = CountVectorizer(ngram_range=(1,2))
 # v.fit(["doesn’t bet against deep learning. Somehow, every time you run into an obstacle, within six months or a year researchers find a way around it"])
@@ -67,4 +68,10 @@ for category in unique_categories:
 balanced_df = pd.concat(sampled_dfs, ignore_index=True)
 print(balanced_df.category.value_counts())
 # there is 42 unique categories
+
+# lets split for train and testing
+
+X_train, X_test, y_train, y_test = train_test_split(df.balanced.text, df.balanced.category, test_size=0.2, random_state=42)
+
+
 
