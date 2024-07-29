@@ -45,3 +45,26 @@ df = df.drop(columns=['authors', 'date', 'link','headline'])
 #check if there is inbalance
 print(df.category.value_counts()) # well there is inbalance lets set 1000 as base
 
+unique_categories = df['category'].unique()
+print(unique_categories)
+print(len(unique_categories))
+
+
+target_samples = 1000
+sampled_dfs = []
+
+# Sample rows for each category
+for category in unique_categories:
+    category_df = df[df['category'] == category]
+    if len(category_df) > target_samples:
+        sampled_df = category_df.sample(n=target_samples, random_state=42)
+    else:
+        # If there are fewer rows than target, use all available rows
+        sampled_df = category_df
+    sampled_dfs.append(sampled_df)
+
+# Concatenate all sampled DataFrames, data is balanced now
+balanced_df = pd.concat(sampled_dfs, ignore_index=True)
+print(balanced_df.category.value_counts())
+# there is 42 unique categories
+
