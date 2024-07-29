@@ -252,7 +252,9 @@ Removing stop words and find their percentage in sentence:  [Stop Words Removal 
 
 ### Text Representation using Bag of N-grams
 
-**SOON 🔜** Using Bag of N-grams for capturing n-gram information in text.
+The Bag of N-Grams is a text representation method where words or characters are grouped 
+into sequences of N items. It captures patterns in the text by
+counting how often each N-gram appears, helping in text analysis and natural language processing tasks.
 
 ### Using TF-IDF (Term Frequency-Inverse Document Frequency)
 
