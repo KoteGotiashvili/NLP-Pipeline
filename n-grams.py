@@ -45,7 +45,7 @@ v.fit(words_processed)
 
 ## Let's do some use case of n-grams on real dataset
 df = pd.read_json('data/news_dataset.json', lines=True)
-df = df.drop(columns=['authors', 'date', 'link','headline'])
+df = df.drop(columns=['authors', 'date', 'link'])
 
 #check if there is inbalance
 #print(df.category.value_counts()) # well there is inbalance lets set 1000 as base
@@ -55,21 +55,22 @@ unique_categories = df['category'].unique()
 #print(len(unique_categories))
 
 
-target_samples = 1000
-sampled_dfs = []
-
-# Sample rows for each category
-for category in unique_categories:
-    category_df = df[df['category'] == category]
-    if len(category_df) > target_samples:
-        sampled_df = category_df.sample(n=target_samples, random_state=42)
-    else:
-        # If there are fewer rows than target, use all available rows
-        sampled_df = category_df
-    sampled_dfs.append(sampled_df)
-
-# Concatenate all sampled DataFrames, data is balanced now
-balanced_df = pd.concat(sampled_dfs, ignore_index=True)
+# target_samples = 1000
+# sampled_dfs = []
+#
+# # Sample rows for each category
+# for category in unique_categories:
+#     category_df = df[df['category'] == category]
+#     if len(category_df) > target_samples:
+#         sampled_df = category_df.sample(n=target_samples, random_state=42)
+#     else:
+#         # If there are fewer rows than target, use all available rows
+#         sampled_df = category_df
+#     sampled_dfs.append(sampled_df)
+#
+# # Concatenate all sampled DataFrames, data is balanced now
+# balanced_df = pd.concat(sampled_dfs, ignore_index=True)
+balanced_df = df
 #print(balanced_df.category.value_counts())
 # there is 42 unique categories
 
@@ -81,17 +82,17 @@ label_encoder = LabelEncoder()
 balanced_df['category_encoded'] = label_encoder.fit_transform(balanced_df['category'])
 # Drop the original 'category' column if needed
 
-#print(balanced_df.columns)
+print(balanced_df.columns)
 
 # lets split for train and testing
-balanced_df['preprocessed_txt'] = balanced_df['short_description'].apply(preprocess)
-X_train, X_test, y_train, y_test = train_test_split(balanced_df.preprocessed_txt,
+# balanced_df['preprocessed_txt'] = balanced_df['headline'].apply(preprocess)
+X_train, X_test, y_train, y_test = train_test_split(balanced_df.headline,
                                                     balanced_df.category_encoded,
                                                     test_size=0.2,
                                                     random_state=42,
                                                     stratify=balanced_df.category_encoded)
 clf = Pipeline([
-    ('vectorizer_bow', CountVectorizer(ngram_range=(1,3))),
+    ('vectorizer_bow', CountVectorizer()),
     ('classifier', MultinomialNB())
 ])
 
