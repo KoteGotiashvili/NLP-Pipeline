@@ -265,6 +265,13 @@ the training data.**
 
 ### Using TF-IDF (Term Frequency-Inverse Document Frequency)
 
+TF-IDF (Term Frequency-Inverse Document Frequency) measures word importance 
+in a document relative to a corpus. TF counts word frequency in a document,
+while IDF reduces the weight of common words across the corpus. TF-IDF multiplies these,
+emphasizing words that are unique and significant to a document.
+
+**There is mathematical formulation**
+![alt text](images/tfidf.png)
 
 
 ### Using Word Embeddings
