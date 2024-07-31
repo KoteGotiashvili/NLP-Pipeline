@@ -273,6 +273,8 @@ emphasizing words that are unique and significant to a document.
 **There is mathematical formulation**
 ![alt text](images/tfidf.png)
 
+**Limitations is same on here**
+
 
 ### Using Word Embeddings
 
