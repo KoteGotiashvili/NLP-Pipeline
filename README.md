@@ -265,7 +265,7 @@ the training data.**
 
 ### Using TF-IDF (Term Frequency-Inverse Document Frequency)
 
-**SOON 🔜** Explanation and implementation of TF-IDF for text representation.
+
 
 ### Using Word Embeddings
 
