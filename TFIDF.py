@@ -41,7 +41,7 @@ sentences = [
 df = pd.read_csv('./data/emotions.csv')
 # sadness (0), joy (1), love (2), anger (3), fear (4), and surprise (5).
 #print(df.label.value_counts())
-def normalize_labels(df, target_count=14700):
+def normalize_labels(df, target_count=10000):
     # Create an empty DataFrame to store the normalized data
     normalized_df = pd.DataFrame()
 
@@ -81,7 +81,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 clf = Pipeline([
      ('vectorizer_tfidf', TfidfVectorizer()),
-     ('RFC', MultinomialNB())
+     ('RFC', RandomForestClassifier())
 ])
 
 ##2. fit with X_train and y_train
