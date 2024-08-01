@@ -14,16 +14,16 @@ sentences = [
 ]
 
 # lets create tf idf vectorizer
-v = TfidfVectorizer()
-tranformed = v.fit_transform(sentences)
-
-all_feature_names = v.get_feature_names_out()
-
-for word in all_feature_names:
-    # let's get the index in the vocabulary
-    indx = v.vocabulary_.get(word)
-
-    # get the score
-    idf_score = v.idf_[indx]
-
-    print(f"{word} : {idf_score}")
+# v = TfidfVectorizer()
+# tranformed = v.fit_transform(sentences)
+#
+# all_feature_names = v.get_feature_names_out()
+#
+# for word in all_feature_names:
+#     # let's get the index in the vocabulary
+#     indx = v.vocabulary_.get(word)
+#
+#     # get the score
+#     idf_score = v.idf_[indx]
+#
+#     # print(f"{word} : {idf_score}")
