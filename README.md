@@ -275,6 +275,8 @@ emphasizing words that are unique and significant to a document.
 
 **Limitations is same on here**
 
+There is TF IDF on real dataset test: [Review Classifier](TFIDF.py)
+
 
 ### Using Word Embeddings
 
