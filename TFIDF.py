@@ -1,6 +1,10 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 import pandas as pd
 from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.pipeline import Pipeline
+from sklearn.metrics import classification_report
+from sklearn.ensemble import RandomForestClassifier
 sentences = [
     "Ilya Sutskever is a leading figure in deep learning and co-founder of OpenAI.",
     "OpenAI developed the GPT-3 model, which has revolutionized natural language processing.",
@@ -35,7 +39,7 @@ sentences = [
 df = pd.read_csv('./data/emotions.csv')
 # sadness (0), joy (1), love (2), anger (3), fear (4), and surprise (5).
 #print(df.label.value_counts())
-def normalize_labels(df, target_count=14500):
+def normalize_labels(df, target_count=10000):
     # Create an empty DataFrame to store the normalized data
     normalized_df = pd.DataFrame()
 
@@ -47,7 +51,7 @@ def normalize_labels(df, target_count=14500):
         # Sample the rows to reach the target count
         if len(label_df) > target_count:
             # Randomly sample the rows if the label count is greater than the target count
-            sampled_df = label_df.sample(n=target_count, random_state=1)
+            sampled_df = label_df.sample(n=target_count, random_state=42)
         else:
             # If the count is less than the target count, use all rows
             sampled_df = label_df
@@ -57,17 +61,35 @@ def normalize_labels(df, target_count=14500):
 
     return normalized_df
 
-df = normalize_labels(df, target_count=14500)
+new_df = normalize_labels(df)
 
+#print(new_df.head())
+#print(new_df.columns)
 X_train, X_test, y_train, y_test = train_test_split(
-    df.text,
-    df.label,
+    new_df.text,
+    new_df.label,
     test_size=0.2, # 20% samples will go to test dataset
     random_state=42,
-    stratify=df.label
+    stratify=new_df.label
 )
 #print("Shape of X_train: ", X_train.shape)
 #print("Shape of X_test: ", X_test.shape)
 #print(y_train.value_counts())
 
+
+clf = Pipeline([
+     ('vectorizer_tfidf', TfidfVectorizer()),
+     ('RFC', RandomForestClassifier())
+])
+
+##2. fit with X_train and y_train
+clf.fit(X_train, y_train)
+
+
+#3. get the predictions for X_test and store it in y_pred
+y_pred = clf.predict(X_test)
+# print(X_train.shape)
+
+#4. print the classfication report
+print(classification_report(y_test, y_pred))
 
