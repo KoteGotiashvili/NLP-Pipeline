@@ -277,6 +277,8 @@ emphasizing words that are unique and significant to a document.
 
 There is TF IDF on real dataset test: [Review Classifier](TFIDF.py)
 
+Got best accuracy on RandomForestClassifier, but run faster on MultinomialNaiveBayes class
+
 
 ### Using Word Embeddings
 
