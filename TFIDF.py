@@ -1,5 +1,6 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 import pandas as pd
+from sklearn.model_selection import train_test_split
 sentences = [
     "Ilya Sutskever is a leading figure in deep learning and co-founder of OpenAI.",
     "OpenAI developed the GPT-3 model, which has revolutionized natural language processing.",
@@ -57,4 +58,16 @@ def normalize_labels(df, target_count=14500):
     return normalized_df
 
 df = normalize_labels(df, target_count=14500)
-print(df.head())
+
+X_train, X_test, y_train, y_test = train_test_split(
+    df.text,
+    df.label,
+    test_size=0.2, # 20% samples will go to test dataset
+    random_state=42,
+    stratify=df.label
+)
+#print("Shape of X_train: ", X_train.shape)
+#print("Shape of X_test: ", X_test.shape)
+#print(y_train.value_counts())
+
+
