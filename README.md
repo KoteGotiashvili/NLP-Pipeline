@@ -282,7 +282,28 @@ Got best accuracy on RandomForestClassifier, but run faster on MultinomialNaiveB
 
 ### Using Word Embeddings
 
-**SOON 🔜** Introduction to word embeddings and their applications in NLP.
+**Previous techniques have several problems, which is solved by Word Embeddings**
+
+There are different Word Embedding Methods:
+
+**Word2Vec**
+
+**GloVe**
+
+**FastText**
+
+Also there are technique based on transformer architecture
+
+**BERT**
+
+**GPT**
+
+**RoBERTa**
+
+**ELMo** based on LSTM network
+
+**All above turns words into vector space and catch meaning of words, also it reduces computation
+power used compared to BOW and TF-IDF**
 
 ### Word Vectors in Spacy
 
