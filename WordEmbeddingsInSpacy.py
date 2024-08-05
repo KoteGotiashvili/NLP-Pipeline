@@ -20,4 +20,6 @@ doc = nlp("workout running pushups sleep playing gamer AI ML food ")
 
 check_similarity(doc, base_token)
 
+## Let's clasify news dataset using WordEmbedding
+
 
