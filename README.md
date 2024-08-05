@@ -305,6 +305,10 @@ Also there are technique based on transformer architecture
 **All above turns words into vector space and catch meaning of words, also it reduces computation
 power used compared to BOW and TF-IDF**
 
+**When we are talking about word similarity, we don't mean how similar they are but
+how often they used in same context, because language models are trained on a bunch of texts
+and they make conclusions based on data they work on**
+
 ### Word Vectors in Spacy
 
 **SOON 🔜** Understanding word vectors and their implementation using Spacy.
