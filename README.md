@@ -309,17 +309,7 @@ power used compared to BOW and TF-IDF**
 how often they used in same context, because language models are trained on a bunch of texts
 and they make conclusions based on data they work on**
 
-### Word Vectors in Spacy
 
-**SOON 🔜** Understanding word vectors and their implementation using Spacy.
-
-### Classification using Word Vectors in Spacy
-
-**SOON 🔜** How to perform classification tasks using word vectors in Spacy.
-
-### Word Vectors in Gensim
-
-**SOON 🔜** Introduction to word vectors using the Gensim library in Python.
 
 
 This repository aims to be a thorough, hands-on guide to Natural Language Processing. Happy learning and coding!
